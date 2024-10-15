@@ -1,0 +1,1497 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/*......................................................................Header Bölümü Başlangıç......................................................................*/
+
+#header {
+  position: relative;
+}
+header {
+  height: 80vh;
+  background-image: url("photos/hero-man.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  height: 55px;
+
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.3s;
+}
+
+.navbar.scrolled {
+  background-color: #355592;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  margin-left: 170px;
+}
+
+.logo img {
+  width: auto;
+  margin-right: 10px;
+}
+
+.logo h1 {
+  font-size: 24px;
+  color: white;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  justify-content: left;
+  margin: 0;
+  padding: 0;
+  margin-right: 500px;
+}
+
+.nav-links li {
+  display: flex;
+  align-items: center;
+  margin: 0 5px;
+  padding-right: 10px;
+}
+
+.nav-links li:last-child {
+  margin-right: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 0.3s ease;
+  margin-right: 0px;
+  padding-right: 0px;
+  padding-left: 0px;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #ffcc00;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  border-radius: 5px;
+  margin-right: 25px;
+}
+
+@media screen and (max-width: 576px) {
+  .nav-links {
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    top: 0;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+}
+
+.nav-links.active {
+  display: flex;
+  transform: translateX(0%);
+}
+.hamburger {
+  display: flex;
+}
+.hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 576px) {
+  .hamburger {
+    display: flex; /* Sadece küçük ekranlarda gösterilecek */
+  }
+}
+
+.nav-links li {
+  margin: 10px 0;
+}
+
+.nav-links li a {
+  padding: 15px;
+  width: 100%;
+  display: block;
+}
+
+.join-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.join-btn {
+  background-color: rgb(241, 151, 14);
+  color: #ffffff;
+
+  padding: 6px 8px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+  margin-left: 30px;
+  margin-right: 30px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  transform: translateX(-25px);
+  padding-left: 30px;
+  width: 79px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.join-btn:hover {
+  background-color: #f79000;
+  color: #ffffff;
+}
+
+.hero-section {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  text-align: left;
+  margin-left: 180px;
+  color: #fff;
+  font-weight: bolder;
+}
+
+.hero-section h2 {
+  font-weight: bold;
+  font-size: 48px;
+  font-family: Arial;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+}
+
+.hero-section p {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.cta-buttons .btn {
+  padding: 7px 20px 4px;
+  margin: 0 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.powerfull {
+  background-color: rgb(53, 85, 146);
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 1px 10px;
+  border-radius: 3px;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.sign-up {
+  background-color: rgb(53, 85, 146);
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 1px 10px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.details {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.sign-up:hover {
+  background-color: #003399;
+}
+
+.details:hover {
+  background-color: white;
+  color: black;
+}
+@media (max-width: 576.98px) {
+  #header {
+    background-color: yellow;
+  }
+}
+@media (max-width: 576.98px) {
+  header {
+    height: 60vh;
+    background-position: top;
+  }
+
+  .navbar {
+    justify-content: space-between;
+    padding: 0 15px;
+  }
+
+  .logo {
+    margin-left: 0;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 100%;
+    background-color: #355592;
+    padding: 10px 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .hero-section {
+    margin-left: 10px;
+    text-align: left;
+  }
+
+  .hero-section h2 {
+    font-size: 36px;
+  }
+
+  .hero-section p {
+    font-size: 16px;
+  }
+}
+
+/*......................................................................Header Bölümü Bitiş......................................................................*/
+
+/*......................................................................Statistics Bölümü Başlangıç......................................................................*/
+.statistics {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 50px 0;
+  background-color: rgb(242, 248, 254);
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  width: 150px;
+}
+
+.stat-box h2 {
+  font-size: 20px;
+  color: rgb(53, 85, 146);
+}
+
+.stat-box p {
+  font-size: 1rem;
+  color: #000;
+  font-weight: bold;
+  margin-top: 5px;
+  font-weight: 1200;
+}
+/*......................................................................Statistics Bölümü Bitiş......................................................................*/
+
+/*......................................................................Our Classes Bölümü Başlangıç......................................................................*/
+
+.our-classes {
+  text-align: center;
+  background: linear-gradient(73deg, #ffffff 50%, #f7f7f6 50%);
+
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.our-classes h2 {
+  font-size: 2rem;
+  color: rgb(53, 85, 146);
+  margin-bottom: 10px;
+  margin-top: 0px;
+  padding-top: 80px;
+}
+
+.our-classes p {
+  font-size: 13px;
+  color: #333;
+  margin-bottom: 20px;
+}
+.underline {
+  width: 70px;
+  height: 7px;
+  border-radius: 5px;
+  background-color: #f39c12;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+
+.class-buttons {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+  gap: 90px;
+  flex-wrap: wrap;
+}
+
+.class-btn {
+  position: relative;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1rem;
+  background-color: rgb(51, 82, 152);
+  flex-wrap: wrap;
+}
+.class-btn:hover {
+  background-color: orange;
+}
+.class-btn:focus::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #f39c12;
+}
+
+.yoga {
+  background-color: rgb(53, 85, 146);
+  color: white;
+}
+
+.group,
+.solo,
+.stretching {
+  background-color: rgb(53, 85, 146);
+  color: white;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: transparent;
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.text-section {
+  flex: 1;
+  margin-right: 50px;
+  padding-right: 15px;
+}
+
+.text-section h2 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.text-section p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.text-section h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.text-section span {
+  display: block;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.image-section {
+  flex: 1;
+}
+
+.image-section img {
+  width: 80%;
+  border-radius: 8px;
+  object-fit: cover;
+  padding-left: 40px;
+  padding-top: 30px;
+}
+.hidden-section {
+  display: none;
+}
+.hidden-section img {
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 576) {
+  .hidden-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hidden-section img {
+    margin: 20px 0 0 0;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.container img {
+  width: 100% auto;
+  border-radius: 8px;
+  object-fit: cover;
+  padding-left: 40px;
+  padding-top: 30px;
+  height: auto;
+}
+@media screen and (max-width: 576px) {
+  .our-classes {
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+  .hidden-content {
+    display: none;
+  }
+
+  .our-classes h2 {
+    font-size: 1.5rem;
+    padding-top: 40px;
+  }
+
+  .our-classes p {
+    font-size: 12px;
+  }
+
+  .underline {
+    width: 50px;
+    height: 5px;
+  }
+
+  .class-buttons {
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .class-btn {
+    font-size: 0.875rem;
+    padding: 8px 15px;
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .text-section {
+    margin-right: 0;
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .text-section h2 {
+    font-size: 1.25rem;
+    text-align: left;
+  }
+
+  .text-section p {
+    font-size: 12px;
+    text-align: left;
+  }
+
+  .image-section img {
+    width: 100%;
+    padding-left: 0;
+    padding-top: 0;
+    margin-bottom: 20px;
+    margin-left: -40px;
+  }
+
+  .hidden-section {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hidden-section img {
+    margin: 20px 0 0 0;
+    width: 100%;
+    height: auto;
+  }
+}
+
+/*......................................................................Our Clasesses Bitiş......................................................................*/
+
+/*......................................................................Calculator Bölümü Başlangıç......................................................................*/
+
+.bmi-calculator {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 50px 20px;
+  margin-bottom: 50px;
+}
+.bmi-calculator h1 {
+  color: rgb(51, 82, 152);
+  font-size: 35px;
+  text-align: left;
+  font-style: bold;
+}
+
+.bmi-calculator h2 {
+  font-size: 2rem;
+  color: #2b3a8a;
+  margin-bottom: 20px;
+}
+.bmi-calculator span {
+  font-size: 10px;
+}
+
+.bmi-calculator p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.bmi-inputs {
+  margin-bottom: 30px;
+}
+
+.bmi-inputs input {
+  padding: 10px;
+  margin: 0 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 150px;
+}
+
+.bmi-inputs span {
+  font-weight: bold;
+}
+
+.bmi-chart h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+.bmi-chart h2 {
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  margin-bottom: 10px;
+  margin-left: 250px;
+}
+.bmi-chart img {
+  max-width: 100%;
+  height: auto;
+  padding-top: 10px;
+  margin-left: 500px;
+}
+
+.left-content {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 40px;
+  text-align: left;
+  flex: 1;
+  max-width: 50%;
+}
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+.bmi-calculator {
+  background-color: white;
+  padding: 20px;
+}
+.text2 {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.inputs {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  height: 30px;
+}
+
+input {
+  padding: 10px;
+  width: 200px;
+  height: 5px;
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+input + span {
+  margin-left: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.chart {
+  position: relative;
+  display: flex;
+  gap: 75px;
+  justify-content: space-between;
+  background-image: url("photos/bmi-index.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 600px;
+  height: 300px;
+  border-radius: 10px;
+  margin-right: 50px;
+}
+
+.pointer {
+  position: absolute;
+  bottom: -30px;
+  margin-left: 30px;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 30px solid orange;
+  transform: rotate();
+  display: none;
+}
+
+#bmi-result {
+  margin-top: 15px;
+  font-weight: bold;
+}
+@media screen and (max-width: 576px) {
+  .bmi-chart h2 {
+    font-size: 16px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .bmi-chart img {
+    max-width: 100%;
+    height: 100%;
+    padding-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+
+  .chart {
+    width: 100%;
+    height: 200px;
+    gap: 10px;
+    margin-right: 0;
+  }
+
+  .pointer {
+    bottom: -20px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid orange;
+    margin-left: 30px;
+  }
+
+  .inputs {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  input {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  button {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+/*......................................................................Calculator Bölümü Bitiş......................................................................*/
+
+/*......................................................................Trainers Bölümü Başlangıç......................................................................*/
+
+.container2 {
+  width: 100%;
+  padding-top: 100px;
+  margin-top: 0px;
+  text-align: center;
+  background-color: rgb(241, 248, 255);
+}
+
+h2 {
+  font-size: 30px;
+  font-family: Arial;
+  color: rgb(53, 85, 146);
+  margin-bottom: 20px;
+}
+
+.description {
+  color: #444446;
+  font-size: 1rem;
+  margin-bottom: 50px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.trainers {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  height: 349px auto;
+  margin: center;
+  margin-left: 60px;
+  flex-wrap: wrap;
+}
+
+.trainer-card {
+  position: relative;
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ffaf32;
+  margin-right: 50px;
+  left: -20px;
+}
+.trainer-card::before,
+.trainer-card::after {
+  content: "";
+  position: absolute;
+  background-color: rgb(53, 85, 146);
+}
+
+.trainer-card::before {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 8px;
+}
+
+.trainer-card::after {
+  top: 50%;
+  left: 0;
+  transform: translateY(50%);
+  width: 8px;
+  height: 100px;
+}
+.trainer-card::after {
+  top: 50%;
+  left: 0;
+  transform: translateY(-40px);
+  width: 8px;
+  height: 100px;
+}
+
+.trainer-card img {
+  width: auto;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  border-radius: 7px;
+  display: block;
+}
+
+.trainer-info {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: transparent;
+  color: white;
+  padding: 15px;
+  width: 90%;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 2;
+}
+
+.trainer-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.trainer-info p {
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+.square-box,
+.square-box2,
+.square-box3 {
+  position: absolute;
+  background-color: rgb(53, 85, 146);
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.square-box {
+  position: absolute;
+  width: 270px;
+  height: 60px;
+  background-color: rgb(53, 85, 146);
+  top: 20px;
+  left: 12px;
+  margin-top: 240px;
+}
+.square-box2 {
+  position: absolute;
+  width: 170px;
+  height: 100px;
+  background-color: rgb(53, 85, 146);
+  top: 20px;
+  left: 12px;
+  margin-top: 220px;
+  margin-left: 50px;
+}
+.trainer-card:hover .square-box,
+.trainer-card:hover .square-box2,
+.trainer-card:hover .square-box3 {
+  opacity: 1;
+  visibility: visible;
+}
+.trainer-card:hover .trainer-info {
+  opacity: 1;
+  visibility: visible;
+}
+/*......................................................................Trainers Bölümü Bitiş......................................................................*/
+
+/*......................................................................Product Bölümü Başlangıç......................................................................*/
+.product-section {
+  text-align: center;
+  padding: 1rem;
+}
+section.product-section {
+  padding: 1rem;
+  background-color: #f9f9f9;
+  padding-top: 60px;
+}
+.product-section h1 {
+  font-size: 30px;
+  color: rgb(53, 85, 146);
+  font-family: Arial;
+  font-weight: bold;
+}
+
+.product-section p {
+  margin: 1rem 0;
+  color: #666;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  padding-left: 250px;
+  padding-right: 250px;
+}
+
+.product-card {
+  flex: 1 1 calc(25% - 10px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  flex-direction: column;
+  display: flex;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0px;
+  margin: 0px;
+  padding: 0px;
+  flex-wrap: wrap;
+}
+
+.product-card h3 {
+  font-size: 1.2rem;
+  margin: rem 0;
+  padding-top: 5px;
+}
+
+.product-card p {
+  color: #333;
+  font-size: 12px;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+.product-card button {
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  color: #060606;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+@media (max-width: 576px) {
+  .product-container {
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: center;
+  }
+
+  .product-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .product-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .product-card h3 {
+    font-size: 1rem;
+  }
+
+  .product-card p {
+    font-size: 11px;
+  }
+
+  .product-card button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+.product-card button:hover {
+  background-color: #2338a3;
+  color: #ffffff;
+}
+
+@media (max-width: 576px) {
+  .product-card {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .product-card {
+    flex: 1 1 100%;
+  }
+}
+
+/*......................................................................Product Bölümü Bitiş......................................................................*/
+
+/*......................................................................Review Bölümü Başlangıç......................................................................*/
+
+.review-client {
+  text-align: center;
+  padding: 40px 0;
+  background-color: rgb(242, 248, 254);
+  padding-bottom: 80px;
+}
+
+.review-client h2 {
+  font-size: 32px;
+  color: rgb(53, 85, 146);
+  margin-bottom: 10px;
+}
+
+.review-client p {
+  color: #f9f9f9;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+.review-client p {
+  color: #ffffff;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+.client-reviews {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.review {
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 20px;
+  width: 500px;
+  max-width: 100%;
+}
+
+.profile-card {
+  width: auto;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 8px;
+  max-width: 300px;
+}
+
+.profile-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-info h2 {
+  font-size: 16px;
+  margin: 0;
+  color: #000;
+}
+
+.profile-info p {
+  font-size: 14px;
+  color: gray;
+  margin: 0;
+  margin-left: -55px;
+}
+
+.profile-info2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-info2 h2 {
+  font-size: 16px;
+  margin: 0;
+  color: #000;
+}
+
+.profile-info2 p {
+  font-size: 14px;
+  color: gray;
+  margin: 0;
+  margin-left: -77px;
+}
+
+.review-text {
+  position: relative;
+  background-color: rgb(53, 85, 146);
+  color: white;
+  padding: 20px;
+  width: 450px;
+  max-width: 100%;
+  text-align: left;
+  height: 120px;
+}
+
+@media (max-width: 576px) {
+  .review {
+    width: 100%;
+    padding: 10px;
+    margin-right: 30px;
+  }
+
+  .profile-card {
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 100%;
+  }
+
+  .profile-info,
+  .profile-info2 {
+    margin-left: 0;
+  }
+
+  .profile-info h2,
+  .profile-info2 h2 {
+    font-size: 14px;
+  }
+
+  .profile-info p,
+  .profile-info2 p {
+    font-size: 12px;
+    margin-left: 0;
+  }
+
+  .review-text {
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+.review-text::after {
+  content: "";
+  position: absolute;
+  bottom: -29.5px;
+  left: 460px;
+  border-width: 30px 30px 0 0;
+  border-style: solid;
+  border-color: #7693bc transparent transparent transparent;
+}
+
+.review-text::before {
+  content: "";
+  position: absolute;
+  bottom: -29.5px;
+  right: 460px;
+  border-width: 0 0 30px 30px;
+  border-style: solid;
+  border-color: transparent transparent #7693bc transparent;
+  transform: scaleY(-1);
+}
+
+@media screen and (max-width: 576px) {
+  .review-text::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 410px;
+    transform: translateX(-50%);
+    border-width: 20px 20px 0 0;
+    border-style: solid;
+    border-color: #7693bc transparent transparent transparent;
+  }
+
+  .review-text::before {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    right: 410px;
+    transform: translateX(50%) scaleY(-1);
+    border-width: 0 0 20px 20px;
+    border-style: solid;
+    border-color: transparent transparent #7693bc transparent;
+  }
+}
+#edit {
+  color: #000;
+}
+/*......................................................................Review Bölümü Bitiş......................................................................*/
+
+/*......................................................................Contact Us Bölümü Başlangıç......................................................................*/
+.contact-us {
+  text-align: center;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+h1 {
+  font-size: 32px;
+  color: rgb(53, 85, 146);
+  margin-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 13px;
+  margin-bottom: 40px;
+  color: #000000;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 40px;
+  margin-left: 250px;
+}
+
+.left-section {
+  width: 850px;
+}
+
+.contact-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  gap: 1px;
+}
+
+.contact-item {
+  width: 40%;
+}
+
+.contact-item2 {
+  width: 40%;
+  margin-right: 240px;
+}
+
+.contact-item h2 {
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.contact-item p {
+  font-size: 13px;
+}
+
+.contact-item2 h2 {
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.contact-item2 p {
+  font-size: 13px;
+}
+
+.appointment-form input,
+.appointment-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 13px;
+  border: 8px solid;
+  border-color: rgb(241, 248, 251);
+  border-radius: 5px;
+  background-color: rgb(241, 248, 251);
+  margin-top: -2px;
+}
+
+.appointment-form h2 {
+  color: #000000;
+  text-align: left;
+  font-size: 25px;
+}
+
+#map {
+  width: 100%;
+  padding-right: 140px;
+  text-align: center;
+}
+
+@media screen and (max-width: 576px) {
+  .content {
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  .contact-details {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-item,
+  .contact-item2 {
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+    margin-left: -210px;
+  }
+
+  .contact-item h2,
+  .contact-item2 h2,
+  .contact-item p,
+  .contact-item2 p {
+    text-align: center;
+  }
+
+  #map {
+    padding-right: 0px;
+  }
+}
+/*......................................................................Contact Us Bölümü Bitiş......................................................................*/
+
+/*......................................................................Footer Bölümü Başlangıç......................................................................*/
+
+.footer {
+  background-color: rgb(53, 85, 146);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.footer-top {
+  margin-bottom: 40px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  margin-left: 200px;
+  margin-bottom: 10px;
+}
+
+.footer-logo .logo {
+  width: 200px;
+  margin-left: 10px;
+}
+
+.footer-logo h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.footer-description {
+  max-width: 1100px;
+  margin-left: 215px;
+  text-align: left;
+  margin-right: 223px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  align-items: flex-start;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-column h2 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #ffffff;
+  text-align: left;
+}
+
+.footer-column ul {
+  list-style: none;
+  text-align: left;
+  font-size: 12px;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 15px;
+}
+
+.footer-column ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 576px) {
+  .footer-description {
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .footer-logo {
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    align-items: center;
+    text-align: center;
+  }
+}
+/*......................................................................Footer Bölümü Bitiş......................................................................*/
