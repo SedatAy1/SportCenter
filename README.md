@@ -1,5 +1,5 @@
 # POWERFULL SPORT CENTER WEBSITE
-## Live Link: [https://main--tangerine-biscuit-3518cf.netlify.app/#section5](https://famous-selkie-e82db2.netlify.app)
+## Live Link: https://famous-selkie-e82db2.netlify.app
 It is a gym website designed based on the given requirements and visuals. It is designed to be mobile compatible and responsive.
 
 ---
